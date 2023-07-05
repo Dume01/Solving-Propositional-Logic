@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+
+    <title>Assignment 2</title>
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Bootstrap jss -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- My css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome css -->
+    <script src="https://kit.fontawesome.com/d47dbe36d2.js" crossorigin="anonymous"></script>
+    <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+    <link rel="stylesheet" href="/styles1.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-top.css" rel="stylesheet">
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Logic Assignment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" href="html/index.html">Documentation</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <h1>Algorithm Implemented</h1>
+    <br>
+    <p><strong>Step 1:</strong> Input the number of lines and make an array(of strings) of the same size as the number of lines inuted.</p>
+    <p><strong>Step 2:</strong> Input the lines of proof in form of strings in a variable (say w) and check which sort of operation is used and apply the method appropriately.</p>
+    <p><strong>Step 3:</strong> Make an If-Else ladder which checks which prrof is used and sends the proposition and its the lines into consideration accordingly to the funcions.</p>
+    <ul>
+      <li><strong>Premise-</strong> With the help of substring extract the premise from the input and store it into the array.</li>
+      <li><strong>And Introduction-</strong> Pass the array and string which we get after applying the rule and the line numbers to the function. In the function get the propositional atom according to line number and construct the right proposition that should be formed and compare it with inputed line and return thr boolean value accordingly.</li>
+      <li><strong>And Eliminiation 1 and 2-</strong> Pass the array and string which we get after applying the rule and the line number to the function for checking. Extract the part of the string of line number by stack and compare it with the inputed string if matched return true else return false.</li>
+      <li><strong>Or Introduction 1 and 2-</strong> Pass the array and string which we get after applying the rule and the line number to the function for checking. Check with the inputed string that the part before or after Or symbol ('v') is matching the string in line or not. Pass the value in boolean accordingly.</li>
+      <li><strong>Implication Eliminiation-</strong> Pass the array and string which we get after applying the rule and the line numbers to the function for checking. Construct the appropriate out put using the strings in the inputed line by firstly matching the part before implication sign ('>') and extracting the right hand side part of implication. Match the extracted part with the inputed string and return true or false accordingly.</li>
+      <li><strong>Modus Tollens-</strong> Pass the array and string which we get after applying the rule and the line numbers to the function for checking. Check the proposition in the line numbers check if the right hand side of the implication sign ('>') matches if negated with the other line. Then extract the left and side of the implicaion sign and negate it after that match with the inputed string and return boolean value.</li>
+    </ul>
+    <p><strong>Step 4:</strong> Once the rule implemented is checked it will return a boolean if its false stop taking input and print "invalid" if its true add the string to the array and carry on taking inputs. </p>
+    <p><strong>Step 5:</strong> If all lines are inputed and no false value is returned then print "valid".</p>
+  </div>
+  <br>
+  <p><h1>To See the Implemented Code</h1>  <a href="https://onlinegdb.com/Ewuk48Kwd"><button type="button" class="btn btn-dark">Click Here</button></a></p>
+
+  <h2>Sample Output</h2>
+  <br>
+  <h3>And Introduction</h3>
+  <img src="Images/1.1.png" alt="">
+  <br>
+  <br>
+  <h3>And Eliminiation</h3>
+  <img src="Images/1.2.png" alt="">
+  <br>
+  <br>
+  <h3>Or Introduction</h3>
+  <img src="Images/1.3.png" alt="">
+  <br>
+  <br>
+  <h3>Implication Elimination</h3>
+  <img src="Images/1.4.png" alt="">
+  <br>
+  <br>
+  <h3>Modus Tollens</h3>
+  <img src="Images/1.5.png" alt="">
+  <br>
+  <br>
+  <h3>Time Complexity : </h3> <h4><i>O(n)</i></h4>
+  <h3>Auxillary Space Complexity : </h3> <h4><i>O(n)</i></h4>
+  <br>
+  <h4>Graph for Time Complexity</h4>
+  <img src="Images/Final.png" alt="">
+  <div class="bg-light p-5 rounded">
+    <h1>Further Rules</h1>
+    <br>
+    <p><strong>1.</strong> For extending the current algos to further rule we just need to add them is already created main in the if-else ladder</p>
+    <p><strong>2.</strong> For implementing double negation Elimination and Introduction we need to just just the presence of the '~' and act accordingly</p>
+    <p><strong>3.</strong> For Implication Introduction we need to pass the lines on which it has occured check each rules that went under the block of lines if they right then see if the implication is n forst and last line and if its done right or not.</p>
+    <p><strong>4.</strong> Or Elimination is a tricky part in it we need to check 2 blocks of different rules and check if the last line of each block corresponds to the desired output of the Or elimination</p>
+    <p><strong>5.</strong> Similarly any other rule can be implementedby string manupulation and appropriate passing of values to the functions of each rule</p>
+  </div>
+    <br>
+    <br>
+    <h1>Thank you !</h1>
+    <br>
+    <br>
+
+</main>
+
+    <script src="//onlinegdb.com/embed/js/Ewuk48Kwd?theme=dark"></script>
+    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
